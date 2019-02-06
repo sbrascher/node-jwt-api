@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/server.js",
+    "dev": "nodemon ./bin/server.js",
+    "debug": "nodemon --nolazy --inspect-brk=3001 ./bin/server.js"
   },
   "repository": {
     "type": "git",
@@ -18,8 +20,12 @@
   "homepage": "https://github.com/sbrascher/node-jwt-api#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
     "express": "^4.16.4",
     "jsonwebtoken": "^8.4.0",
     "mongoose": "^5.4.10"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
   }
 }
