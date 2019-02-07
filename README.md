@@ -1,12 +1,12 @@
 # node-jwt-api
 
-<b>Required</b>:
+<b>Required:</b>
 - [NodeJs](https://nodejs.org)
   - Express
   
 - [MongoDB](https://www.mongodb.com/download-center/community)
 
-Steps:
+<b>Steps:</b>
 
   $> git clone https://github.com/avmesquita/node-jwt-api.git
   
