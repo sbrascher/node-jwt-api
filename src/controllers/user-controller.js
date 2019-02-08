@@ -5,12 +5,23 @@ const ValidationContract = require('../validators/fluent-validator');
 const config = require('../config');
 
 
-var map = function (user) {
-    return {
-        id: user._id,
-        name: user.name,
-        email: user.email
-    };
+
+exports.create = async (req, res, next) => {
+    try {
+        let data = {
+            name: req.body.name,
+            email: req.body.email,
+            password: req.body.password,
+            search_name: accents.remove(req.body.name).toLowerCase()
+        };
+
+        let user = await userRepository.create(data);
+
+        res.status(200).send({});
+
+    } catch (ex) {
+        res.status(500).send({});
+    }
 }
 
 
